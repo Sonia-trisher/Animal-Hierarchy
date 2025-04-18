@@ -5,20 +5,33 @@ import model.Dog;
 
 public class Main {
     public static void main(String[] args) {
-         Animal genericAnimal = new Animal();
-        Cat myCat = new Cat();
-        Dog myDog = new Dog();
-        Bird myBird = new Bird();
+        Bird myBird = new Bird("Tweety");
         System.out.println("bird says :");
         myBird.makeSound();
         System.out.println("bird does :");
         myBird.fly();
 
 
+        Dog myDog = new Dog("Rex");
+        Cat myCat = new Cat("Whiskers");
+        System.out.println("\nOther animals speaking:");
+        myDog.makeSound();
+        myCat.makeSound();
 
 
 
 
+//        Polymorphic behavior
+
+        System.out.println("\nPolymorphism in action:");
+        Animal[] animals = {myCat, myDog, myBird};
+
+        for (Animal animal : animals) {
+            animal.makeSound();
+//
+
+
+        }
 
     }
 }
